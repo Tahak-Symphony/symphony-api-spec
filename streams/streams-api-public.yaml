@@ -73,6 +73,12 @@ paths:
             type: boolean
             default: true
           description: Filter streams to include internal chats.
+        - name: includeAgentStreams
+          in: query
+          schema:
+            type: boolean
+            default: false
+          description: Whether to include AI_AGENT subtype streams in the results.
         - name: cursor
           in: query
           schema:
@@ -150,6 +156,12 @@ paths:
             type: boolean
             default: true
           description: Filter streams to include internal chats.
+        - name: includeAgentStreams
+          in: query
+          schema:
+            type: boolean
+            default: false
+          description: Whether to include AI_AGENT subtype streams in the results.
       responses:
         '200':
           description: List of streams matching the provided IDs.
